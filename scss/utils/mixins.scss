@@ -1,0 +1,49 @@
+@use 'colors' as *;
+
+@mixin background {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin border-radius($man) {
+    -webkit-border-radius: $man;
+    -moz-border-radius: $man;
+    -o-border-radius: $man;
+    -ms-border-radius: $man;
+    border-radius: $man;
+}
+
+@mixin flex-center() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin object-fit() {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin button-style() {}
+
+@mixin line-clamp($line) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    overflow: hidden;
+}

@@ -1,0 +1,22 @@
+.component-image-text {
+    position: relative;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        margin: auto;
+
+        .subheader {
+            font-size: 14px;
+            letter-spacing: 6.4px;
+        }
+
+        .header {
+            font-size: 36px;
+        }
+
+    }
+}

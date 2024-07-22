@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+.component-footer {
+    .product {
+        .product-list {
+            .product-item {
+
+                a {
+
+                    text-decoration: none;
+                    color: $color-text-primary;
+                }
+
+                opacity: .7;
+
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .component-footer{
+        .mobile-footer{
+            display: block !important;
+            .mobile-logo{
+                width: 100% !important;
+            }
+        }
+        .product{
+            margin-top: 3rem;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use '../utils' as *;
+
+.marquee-component {
+    .marquee-item {
+        width: 25vw;
+        height: 260px;
+
+        @include respond(phone) {
+            width: 315px;
+        }
+
+        .marquee-description {
+            @include line-clamp(3);
+        }
+
+        .marquee-title {
+            @include line-clamp(1);
+        }
+    }
+}
+
+.marquee-icon {
+    margin-top: 7rem !important;
+
+
+    .marquee-item {
+        width: 200px;
+        opacity: 0.5;
+        // display: flex;
+        // justify-content: end;
+        // background-color: red;
+
+        @include respond(phone) {
+            width: 80px;
+        }
+
+        .marquee-description {
+            @include line-clamp(3);
+        }
+
+        .marquee-title {
+            @include line-clamp(1);
+        }
+    }
+   
+}

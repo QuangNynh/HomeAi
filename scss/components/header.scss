@@ -1,0 +1,215 @@
+@use '../utils' as *;
+
+
+.navbar-nav .nav-link:hover {
+    color: $color-bg-primary !important
+}
+.dropdown-menu {
+    .dropdown-item:hover {
+        .product-nav-title {
+            color: $color-bg-primary;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-tablet {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        height: 100%;
+
+        .button-mobile {
+            .button-secondary {
+                padding: 0.65rem 1.3rem !important;
+            }
+
+            .button-primary {
+                padding: 0.65rem 1.3rem !important;
+            }
+        }
+    }
+
+    .icon-hover {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+
+    .icon-hover-no {
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+    }
+
+    .menu-kkkkk {
+        top: 4rem;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height .1s ease;
+
+        .quang-nynh {
+            padding: 1rem;
+            background-color: #FFFFFF;
+            display: flex;
+            height: 50%;
+
+            .video-dropdown {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+
+
+                .item-dropdown {
+                    width: 60%;
+
+                    video {
+                        width: 100%;
+                        //  height: 16rem;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .ai-tools {
+                width: 50%;
+                padding-left: 5rem;
+            }
+
+        }
+
+
+        .opacity-header {
+            backdrop-filter: blur(30px);
+            height: 60%;
+            background-color: hsla(0, 0%, 100%, .6);
+        }
+    }
+
+    .menu-kkkkk.open {
+        height: calc(100vh - 4rem);
+    }
+}
+
+@media (max-width:992px) {
+    .tablet-desktop {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        height: 0;
+        overflow: hidden;
+        // transition: height .1s ease;
+        position: absolute;
+        background: rgb(255, 255, 255);
+        top: 4rem;
+        left: 0px;
+        width: 100% !important;
+        transition: all 0.2s ease;
+        transform: translateY(0);
+        padding: 0 2rem;
+
+        .button-mobile {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mobile-tablet {
+            .nav-item {
+                border-bottom: 1px solid #d9d9d9;
+
+                .dropdown-toggle {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .dropdown-toggle::after {
+                    transform: rotate(-90deg);
+                    transition: transform .3s ease;
+                }
+
+                .show {
+                    border: none;
+
+                }
+
+                .show::after {
+                    transform: rotate(0);
+                    transition: transform .3s ease;
+                }
+            }
+        }
+    }
+
+    .navbar-collapse.show {
+        height: calc(100vh - 4rem);
+    }
+
+}
+
+.sticky-menu {
+    position: fixed;
+    left: 0;
+    height: 4rem;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #FFFFFF;
+    -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.05);
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.05);
+    border-radius: 0;
+    .navbar-nav .nav-item .nav-link {
+        color: #000000;
+    }
+}
+
+.sticky-menu-no {
+    position: fixed;
+    left: 0;
+   
+    background-color: none !important;
+    height: 4rem;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    .navbar-nav .nav-item .nav-link {
+        color: #8b8b8b;
+    }
+    .tille-logo{
+        color: #8b8b8b;
+    }
+
+    &:hover {
+        background-color: #FFFFFF;
+        .navbar-nav .nav-item .nav-link {
+            color: #000000;
+        }
+        .tille-logo{
+            color: #000000;
+        }
+    }
+
+}
+
+.custom-navbar {
+    height: 100% !important;
+    padding: 0 2em !important;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

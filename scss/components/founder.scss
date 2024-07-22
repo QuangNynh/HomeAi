@@ -1,0 +1,27 @@
+@use '../utils/' as *;
+
+.component-founder {
+    background-color: #f1f1f2;
+
+    .list-founder {
+        align-items: start;
+        display: grid;
+        gap: 45px 45px;
+        grid-template-columns: repeat(5, 1fr);
+
+        .founder {
+            background-color: #FFFFFF;
+            padding: 12px;
+
+            .founder-name {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .founder-position {
+                font-size: 14px;
+                opacity: .5;
+            }
+        }
+    }
+}

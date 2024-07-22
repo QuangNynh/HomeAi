@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+.custom-modal {
+    .modal-dialog {
+        max-width: unset;
+        width: 70vw;
+        height: 80vh;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include respond(phone) {
+            height: 50vh;
+        }
+
+        .modal-content {
+            height: 100%;
+        }
+    }
+
+    .custom-modal-close {
+        position: absolute;
+        z-index: 2;
+        background-color: transparent;
+        top: 0px;
+        border: 0;
+        right: -30px;
+        cursor: pointer;
+        color: #FFFFFF;
+        font-size: 20px;
+    }
+}
