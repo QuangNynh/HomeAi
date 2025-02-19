@@ -5,6 +5,7 @@ const Contact = () => {
     return (
         <>
             <GetInTouch />
+            hi
             <ContactHome />
         </>
     );
