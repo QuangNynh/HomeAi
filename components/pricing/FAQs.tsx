@@ -35,6 +35,7 @@ const FAQs: React.FC = () => {
                         Frequently Asked Questions
                     </h1>
                 </div>
+                jjj
                 <div className="list-faqs px-5">
                     <Accordion>
                         {listFAQs.map((FAQ, index) => (
